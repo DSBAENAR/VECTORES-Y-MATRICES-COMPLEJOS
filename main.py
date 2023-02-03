@@ -1,4 +1,7 @@
 import numpy as np
+def setUp(self):
+    self.complex_matrix1 = np.array([[1 + 1j, 2 + 2j], [3 + 3j, 4 + 4j]])
+    self.complex_matrix2 = np.array([[2 + 2j, 1 + 1j], [1 + 1j, 2 + 2j]])
 
 def add_complex_vectors(v1, v2):
     return np.add(v1, v2)
@@ -7,7 +10,7 @@ def inverse_complex_vector(v):
     return np.negative(v)
 
 def scalar_multiplication_complex_vector(c, v):
-    return c * v
+    return np.multiply(c, v)
 
 def add_complex_matrices(m1, m2):
     return np.add(m1, m2)
@@ -16,7 +19,7 @@ def inverse_complex_matrix(m):
     return np.negative(m)
 
 def scalar_multiplication_complex_matrix(c, m):
-    return c * m
+    return np.multiply(c,m)
 
 def transpose_matrix(m):
     return np.transpose(m)
@@ -48,4 +51,5 @@ def is_hermitian_matrix(m):
     return np.allclose(m, np.conjugate(np.transpose(m)))
 
 def tensor_product(m1, m2):
+    return np.kron(m1, m2)
     return np.kron(m1, m2)
