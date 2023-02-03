@@ -49,4 +49,3 @@ def is_hermitian_matrix(m):
 
 def tensor_product(m1, m2):
     return np.kron(m1, m2)
-    return np.kron(m1, m2)
