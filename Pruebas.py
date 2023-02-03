@@ -12,6 +12,13 @@ class TestQuantumOperations(unittest.TestCase):
         result = add_complex_vectors(self.complex_vector1, self.complex_vector2)
         expected = np.array([2 + 2j, 4 + 4j, 7 + 7j])
         np.testing.assert_array_equal(result, expected)
+        
+    def test_addition_with_zero_vector(self):
+        vector1 = np.array([1 + 2j, 3 + 4j, 5 + 6j])
+        vector2 = np.zeros(3, dtype=complex)
+        expected = np.array([1 + 2j, 3 + 4j, 5 + 6j])
+        result = add_complex_vectors(vector1, vector2)
+        np.testing.assert_array_equal(result, expected)
 
     def test_inverse_complex_vector(self):
         result = inverse_complex_vector(self.complex_vector1)
