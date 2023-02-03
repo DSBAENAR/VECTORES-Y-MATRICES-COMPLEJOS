@@ -33,10 +33,11 @@ class TestQuantumOperations(unittest.TestCase):
         expected = np.array([[-1 - 1j, -2 - 2j], [-3 - 3j, -4 - 4j]])
         np.testing.assert_array_equal(result, expected)
 
-    def test_scalar_multiplication_complex_matrix(self):
-        result = scalar_multiplication_complex_matrix(2, self.complex_matrix1)
-        expected = np.array([[2 + 2j, 4 + 4j], [6 + 6j, 8 + 8j]])
-        np.testing.assert_array_equal(result, expected)
+    def test_scalar_matrix_product(self):
+    c = complex(2, 3)
+    M = np.array([[complex(1, 2), complex(3, 4)], [complex(5, 6), complex(7, 8)]])
+    expected_output = np.array([[complex(-4, 7), complex(-6, 17)], [complex(-8, 27), complex(-10, 37)]])
+    self.assertTrue((scalar_matrix_product(c, M) == expected_output).all())
 
     def test_matrix_transpose(self):
         A = np.array([[(2, 1), (3, -2)], [(5, -3), (1, 1)]])
