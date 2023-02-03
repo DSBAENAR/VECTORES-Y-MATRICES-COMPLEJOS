@@ -1,7 +1,4 @@
 import numpy as np
-def setUp(self):
-    self.complex_matrix1 = np.array([[1 + 1j, 2 + 2j], [3 + 3j, 4 + 4j]])
-    self.complex_matrix2 = np.array([[2 + 2j, 1 + 1j], [1 + 1j, 2 + 2j]])
 
 def add_complex_vectors(v1, v2):
     return np.add(v1, v2)
