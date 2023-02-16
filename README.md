@@ -1,6 +1,6 @@
 # VECTORES-Y-MATRICES-COMPLEJOS
 Este laboratorio tiene como propósito la creación de una librería
-##con la idea de usar nuestros conocimientos adquieridos durante
+con la idea de usar nuestros conocimientos adquieridos durante
 ##la carrera, para el desarrollo se debió estudiar en clase ciertas propiedades de los vectores y matrices complejas que no tienen los reales, se tuvo que investigar de librerías externas.
 La libreria consta de:
 1. Adición de vectores complejos.
